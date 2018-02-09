@@ -20,12 +20,6 @@
             <artifactId>junit</artifactId>
         </dependency>
 
-        <!-- myself -->
-        <dependency>
-            <groupId>com.rxx.mytest</groupId>
-            <artifactId>common-utils</artifactId>
-        </dependency>
-
         <!-- spring -->
         <dependency>
             <groupId>org.springframework</groupId>
