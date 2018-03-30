@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+        <!--自动转换驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- log4j的配置信息起作用 -->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!-- 映射map 由spring扫描加载 不需要手动配置-->
+    <mappers>
+        <!-- 注册mapper包下的所有mapper接口 -->
+        <package name="mapper"/>
+    </mappers>
+</configuration>

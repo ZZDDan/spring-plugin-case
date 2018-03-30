@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dubbo-demo</artifactId>
+        <groupId>com.rxx.mytest</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>dubbo-demo-web-users</artifactId>
+    <packaging>war</packaging>
+    <dependencies>
+
+        <!-- mypro -->
+        <dependency>
+            <groupId>com.rxx.mytest</groupId>
+            <artifactId>dubbo-demo-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.rxx.mytest</groupId>
+            <artifactId>dubbo-demo-facade-users</artifactId>
+        </dependency>
+        <!-- 改为 dubbo，就不需要依赖 dubbo-demo-service-users，通过dubbo可以访问到注册到Zookeeper中的dubbo-demo-service-users服务 -->
+        <!--<dependency>
+            <groupId>com.rxx.mytest</groupId>
+            <artifactId>dubbo-demo-service-users</artifactId>
+        </dependency>-->
+
+        <!-- spring -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+
+        <!-- dubbo 需要的jar start -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.jboss.netty</groupId>
+            <artifactId>netty</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+        </dependency>
+        <!-- dubbo 需要的jar end -->
+
+        <!-- json -->
+        <!-- json数据 -->
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>dubbo-demo-web-users</finalName>
+        <resources>
+            <resource>
+                <targetPath>${project.build.directory}/classes</targetPath>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.xml</include>
+                    <include>**/*.properties</include>
+                </includes>
+            </resource>
+        </resources>
+        <!--<pluginManagement>-->
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-war-plugin</artifactId>
+                    <version>${mavenwarplugin.version}</version>
+                    <configuration>
+                        <packagingExcludes>WEB-INF/web.xml</packagingExcludes>
+                        <failOnMissingWebXml>false</failOnMissingWebXml>
+                        <!-- 重点是这个配置 -->
+                        <warName>dubbo-demo-web-users</warName>
+                    </configuration>
+                </plugin>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>maven-jetty-plugin</artifactId>
+                    <version>${mavenjettyplugin.version}</version>
+                    <configuration>
+                        <!-- 每2秒的间隔扫描一次,实现热部署 -->
+                        <scanIntervalSeconds>2</scanIntervalSeconds>
+                        <stopKey>foo</stopKey>
+                        <stopPort>9999</stopPort>
+                        <webAppConfig>
+                            <contextPath>/dubbo-demo-web-users</contextPath>
+                        </webAppConfig>
+                    </configuration>
+                </plugin>
+            </plugins>
+        <!--</pluginManagement>-->
+    </build>
+
+</project>

@@ -10,8 +10,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>webservice</module>
-        <module>activemq</module>
+        <module>webservice-case</module>
+        <module>activemq-case</module>
+        <module>dubbo-case</module>
     </modules>
 
     <properties>
@@ -21,10 +22,11 @@
         <mavenjettyplugin.version>6.1.10</mavenjettyplugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- dependency version -->
+        <junit.version>4.12</junit.version>
         <mytest.version>0.0.1-SNAPSHOT</mytest.version>
         <spring.version>4.3.6.RELEASE</spring.version>
-        <junit.version>4.12</junit.version>
-        <avax.servlet-api>3.0.1</avax.servlet-api>
+        <javax.servlet-api>3.0.1</javax.servlet-api>
         <jsp-api>2.1</jsp-api>
         <commons-lang3>3.5</commons-lang3>
         <log4j.version>1.2.17</log4j.version>
@@ -41,6 +43,16 @@
         <jaxrpc.version>1.1</jaxrpc.version>
         <commons-pool2.version>2.4.2</commons-pool2.version>
         <jedis.version>2.8.1</jedis.version>
+
+        <mybatisspring.version>1.2.2</mybatisspring.version>
+        <druid.version>1.0.9</druid.version>
+        <dubbo.version>2.5.3</dubbo.version>
+        <zookeeper.version>3.4.6</zookeeper.version>
+        <zkclient.version>0.1</zkclient.version>
+        <netty.version>3.2.5.Final</netty.version>
+        <jackson.asl.version>1.9.9</jackson.asl.version>
+        <jackson.version>2.4.2</jackson.version>
+        <slf4j.version>1.6.6</slf4j.version>
     </properties>
     
     <dependencyManagement>
@@ -86,7 +98,7 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>${avax.servlet-api}</version>
+                <version>${javax.servlet-api}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
