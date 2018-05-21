@@ -13,6 +13,7 @@
         <module>webservice-case</module>
         <module>activemq-case</module>
         <module>dubbo-case</module>
+        <module>DJNativeSwing-case</module>
     </modules>
 
     <properties>
