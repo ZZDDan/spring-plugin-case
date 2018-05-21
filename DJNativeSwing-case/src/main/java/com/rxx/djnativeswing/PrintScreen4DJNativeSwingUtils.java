@@ -102,7 +102,7 @@ public class PrintScreen4DJNativeSwingUtils extends JPanel {
 
     /**
      * 以javascript脚本获得网页全屏后大小
-      */
+     */
     public static String getScreenWidthHeight() {
 
         StringBuffer jsDimension = new StringBuffer();
@@ -154,8 +154,7 @@ public class PrintScreen4DJNativeSwingUtils extends JPanel {
 
     public static void main(String[] args) {
 
-//        PrintScreen4DJNativeSwingUtils.printUrlScreen2jpg("1122.jpg", "https://www.baidu.com", 1400, 900);
-        PrintScreen4DJNativeSwingUtils.printUrlScreen2jpg("1122.jpg", "http://bingchengxizi.bokee.com/", 1400, 900);
+        PrintScreen4DJNativeSwingUtils.printUrlScreen2jpg("1144.jpg", "https://zhidao.baidu.com/question/813538525824622372.html", 1400, 800);
 
     }
 
