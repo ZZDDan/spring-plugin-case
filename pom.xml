@@ -14,6 +14,7 @@
         <module>activemq-case</module>
         <module>dubbo-case</module>
         <module>DJNativeSwing-case</module>
+        <module>spider-case</module>
     </modules>
 
     <properties>
