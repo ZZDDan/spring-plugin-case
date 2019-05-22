@@ -11,14 +11,27 @@
 
     <artifactId>spider-case</artifactId>
 
+    <properties>
+        <!-- build version-->
+        <jdk.version>1.8</jdk.version>
+        <mavenwarplugin.version>2.1.1</mavenwarplugin.version>
+        <mavenjettyplugin.version>6.1.10</mavenjettyplugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <log4j.version>1.2.17</log4j.version>
+        <commonslang3.version>3.5</commonslang3.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
+            <version>${commonslang3.version}</version>
         </dependency>
 
         <dependency>

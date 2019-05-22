@@ -1,20 +1,15 @@
 package com.rxx.webservice.client;
 
 import com.alibaba.fastjson.JSONObject;
-import com.rxx.utils.dom.AttackXmlResult;
 import com.rxx.webservice.server.IEventMonitorService;
+import org.apache.axis.client.Call;
+import org.apache.axis.client.Service;
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;
 import org.junit.Test;
 
-
-import org.apache.axis.client.Call;
-import org.apache.axis.client.Service;
-import org.apache.axis.encoding.XMLType;
-
 import javax.xml.namespace.QName;
-import javax.xml.rpc.ParameterMode;
 import javax.xml.rpc.ServiceException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -54,7 +49,7 @@ public class EventMonitorClientTest {
 //        Client client = clientFactory.createClient("http://localhost:8081/somcweb/services/handleItemByParams?wsdl");
         Client client = clientFactory.createClient("http://192.168.12.124/somcweb/services/handleService?wsdl");
         Object[] items = client.invoke("handleItemByParams", "12345", "webpage", "{\"executeType\":\"bak\"}", null);
-        System.out.println(AttackXmlResult.parseDealResult(String.valueOf(items[0])));
+//        System.out.println(AttackXmlResult.parseDealResult(String.valueOf(items[0])));
     }
 
     /**

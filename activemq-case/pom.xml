@@ -11,39 +11,59 @@
 
     <artifactId>activemq-case</artifactId>
 
+    <properties>
+        <!-- build version-->
+        <jdk.version>1.8</jdk.version>
+        <mavenwarplugin.version>2.1.1</mavenwarplugin.version>
+        <mavenjettyplugin.version>6.1.10</mavenjettyplugin.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <spring.version>4.3.6.RELEASE</spring.version>
+        <log4j.version>1.2.17</log4j.version>
+        <jms.version>1.1-rc4</jms.version>
+        <activemq.version>5.14.5</activemq.version>
+    </properties>
+
     <dependencies>
 
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
         </dependency>
 
         <!-- spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jms</artifactId>
+            <version>${spring.version}</version>
         </dependency>
 
         <!-- activemq -->
         <dependency>
             <groupId>geronimo-spec</groupId>
             <artifactId>geronimo-spec-jms</artifactId>
+            <version>${jms.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-spring</artifactId>
+            <version>${activemq.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.activemq</groupId>
             <artifactId>activemq-client</artifactId>
+            <version>${activemq.version}</version>
         </dependency>
     </dependencies>
 

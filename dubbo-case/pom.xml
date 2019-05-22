@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>dubbo-case</artifactId>
+    <packaging>pom</packaging>
     <name>dubbo-case</name>
 
     <modules>
@@ -21,8 +22,14 @@
     </modules>
 
     <properties>
+        <!-- build version-->
+        <jdk.version>1.8</jdk.version>
+        <mavenwarplugin.version>2.1.1</mavenwarplugin.version>
+        <mavenjettyplugin.version>6.1.10</mavenjettyplugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
         <!-- dependency version -->
+        <mytest.version>0.0.1-SNAPSHOT</mytest.version>
         <junit.version>4.12</junit.version>
         <spring.version>4.3.1.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
@@ -37,10 +44,6 @@
         <jackson.version>2.4.2</jackson.version>
         <slf4j.version>1.6.6</slf4j.version>
         <log4j.version>1.2.12</log4j.version>
-        <!-- build version-->
-        <jdk.version>1.8</jdk.version>
-        <mavenwarplugin.version>2.1.1</mavenwarplugin.version>
-        <mavenjettyplugin.version>6.1.10</mavenjettyplugin.version>
     </properties>
 
     <dependencyManagement>
