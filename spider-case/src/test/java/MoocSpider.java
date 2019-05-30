@@ -41,7 +41,6 @@ public class MoocSpider {
         while(true) {
             String url = baseUrl + pid++;
             String pageData = HttpClientUtil.httpGet(url);
-//            logger.info("\n=================================> 原始文件：\n" + pageData);
             if(pageData == null){
                 continue;
             }
@@ -51,7 +50,6 @@ public class MoocSpider {
             document.html(pageData);
             Elements elements = document.select("#main > div.bg-other.user-head-info > div > div.user-info-right > h3 > span");
 
-            int count = 1;
             for (Element e : elements) {
                 String name = e.text();
 
@@ -68,7 +66,6 @@ public class MoocSpider {
             }
 
             Thread.sleep(100);
-
         }
     }
 }
