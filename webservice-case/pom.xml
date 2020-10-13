@@ -27,7 +27,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- dependency version -->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.3.6.RELEASE</spring.version>
         <javax.servlet-api>3.0.1</javax.servlet-api>
         <jsp-api>2.1</jsp-api>
