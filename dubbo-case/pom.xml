@@ -30,7 +30,7 @@
 
         <!-- dependency version -->
         <mytest.version>0.0.1-SNAPSHOT</mytest.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <spring.version>4.3.1.RELEASE</spring.version>
         <mybatis.version>3.2.8</mybatis.version>
         <mybatisspring.version>1.2.2</mybatisspring.version>
